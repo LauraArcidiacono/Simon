@@ -8,9 +8,57 @@
     
     <link rel="stylesheet" href="css/styles.css">
 
+    <audio id="clip1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="clip2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    </audio>
+    <audio id="clip3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    </audio>
+    <audio id="clip4">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    </audio>
 
 </head>
+
 <body>
     
+    <div id="outerCircle">
+        <div id="outerCircle__topLeft"></div>
+
+        <div id="outerCircle__topRight"></div>
+
+        <div id="outerCircle__bottomLeft"></div>
+        
+        <div id="outerCircle__bottomRight"></div>
+       
+        <div id="innerCircle">
+            <h1>SIMON</h1>
+            <section id="innerCircle__switches">
+                <label for="switches__power" class="switches__switch">POWER
+                    <input type="checkbox">
+                    <span class="switch__sliderRound"></span>
+                </label>
+
+                <button class="switches__startButton" id="start">START</button>
+                
+                <label for="switches__power" class="switches__switch">STRICT
+                    <input type="checkbox">
+                    <span class="switch__sliderRound"></span>
+                </label>
+            </section>
+
+            <section id="innerCircle__points">
+                <div id="points__screen" ></div>
+                <h2 id="points__count">COUNT</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
 </body>
+
 </html>
