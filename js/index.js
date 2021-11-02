@@ -11,10 +11,10 @@ let gameOn = false;
 let playerWin;
 
 const turnCounter = document.querySelector('#points__screen');
-const topLeft = document.querySelector('#outerCircle__topLeft');
-const topRight = document.querySelector('#outerCircle__topRight');
-const bottomLeft = document.querySelector('#outerCircle__bottomLeft');
-const bottomRight = document.querySelector('#outerCircle__bottomRight');
+const topLeft = document.querySelector('#top__left');
+const topRight = document.querySelector('#top__right');
+const bottomLeft = document.querySelector('#bottom__left');
+const bottomRight = document.querySelector('#bottom__right');
 const strictButton = document.querySelector('#switch__strict');
 const onButton = document.querySelector('#switch__on');
 const startButton = document.querySelector('#innerCircle__start');
