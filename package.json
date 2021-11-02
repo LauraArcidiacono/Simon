@@ -13,6 +13,7 @@
     "eslint-plugin-import": "^2.25.2"
   },
   "scripts": {
+    "start": "npm start",
     "test": "jest --watchAll --collect-coverage"
   },
   "repository": {
