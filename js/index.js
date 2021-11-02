@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 let orderOfLights = [];
 let playerAnswerOrder = [];
 let currentLightPosition;
@@ -99,17 +98,21 @@ function gameTurn() {
   }
 }
 
-function play() {
-  playerWin = false;
-  orderOfLights = [];
+function resetValues() {
   playerAnswerOrder = [];
   currentLightPosition = 0;
   goodAnswer = true;
+}
+
+function play() {
+  playerWin = false;
+  orderOfLights = [];
+  resetValues();
   intervalId = 0;
   currentRound = 1;
   turnCounter.innerHTML = 1;
 
-  for (let round = 0; round < 3; round += 1) {
+  for (let round = 0; round < 15; round += 1) {
     orderOfLights.push(Math.floor(Math.random() * 4) + 1);
   }
   computerTurn = true;
@@ -121,7 +124,7 @@ function check() {
     !== orderOfLights[playerAnswerOrder.length - 1]) {
     goodAnswer = false;
   }
-  if (playerAnswerOrder.length === 20 && goodAnswer) {
+  if (playerAnswerOrder.length === 15 && goodAnswer) {
     winGame();
   }
   if (goodAnswer === false) {
@@ -135,9 +138,7 @@ function check() {
         play();
       } else {
         computerTurn = true;
-        currentLightPosition = 0;
-        playerAnswerOrder = [];
-        goodAnswer = true;
+        resetValues();
         intervalId = setInterval(gameTurn, 800);
       }
     }, 800);
@@ -153,17 +154,19 @@ function check() {
     intervalId = setInterval(gameTurn, 800);
   }
 }
-
+function playerClickAnswer() {
+  if (!playerWin) {
+    setTimeout(() => {
+      clearColor();
+    }, 300);
+  }
+}
 topLeft.addEventListener('click', () => {
   if (gameOn) {
     playerAnswerOrder.push(1);
     check();
     turnOnLightOne();
-    if (!playerWin) {
-      setTimeout(() => {
-        clearColor();
-      }, 300);
-    }
+    playerClickAnswer();
   }
 });
 
@@ -172,11 +175,7 @@ topRight.addEventListener('click', () => {
     playerAnswerOrder.push(2);
     check();
     turnOnLightTwo();
-    if (!playerWin) {
-      setTimeout(() => {
-        clearColor();
-      }, 300);
-    }
+    playerClickAnswer();
   }
 });
 
@@ -185,11 +184,7 @@ bottomLeft.addEventListener('click', () => {
     playerAnswerOrder.push(3);
     check();
     turnOnLightThree();
-    if (!playerWin) {
-      setTimeout(() => {
-        clearColor();
-      }, 300);
-    }
+    playerClickAnswer();
   }
 });
 
@@ -198,11 +193,7 @@ bottomRight.addEventListener('click', () => {
     playerAnswerOrder.push(4);
     check();
     turnOnLightFour();
-    if (!playerWin) {
-      setTimeout(() => {
-        clearColor();
-      }, 300);
-    }
+    playerClickAnswer();
   }
 });
 
