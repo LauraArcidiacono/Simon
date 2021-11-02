@@ -26,42 +26,46 @@
 <body>
    <section class= simon__information>
         <h1>Simon</h1>
-        <p>REGLAS DEL JUEGO</p>
    </section> 
    <section class="simon__playGround" > 
-        <div id="playGround__outerCircle">
-                <div id="outerCircle__topLeft"></div>
-
-                <div id="outerCircle__topRight"></div>
-
-                <div id="outerCircle__bottomLeft"></div>
+        <div class="playGround__outerCircle">
+            <div class="outerCircle__top">
+                <div id="top__left" class="top__left"></div>
+                <div id="top__right" class="top__right"></div>
+            </div>
                 
-                <div id="outerCircle__bottomRight"></div>
-            
-                <div id="innerCircle">
-                    <h2>SIMON</h2>
-                    <section id="innerCircle__controllers">
-                        <div id="controllers__switches">
-                            <label for="switches__power" class="switches__switch">POWER
-                                <input type="checkbox" id="switch__on"> 
-                                <span class="switch__sliderRound"></span>
-                            </label>
-
-                            <label for="switches__strict" >STRICT
-                                <input type="checkbox" id="switch__strict">
-                                <span class="switch__sliderRound"></span>
-                            </label>
-                    </div>
-                    <button class="controllers__startButton" id="innerCircle__start">START</button>
-                        
-                    </section>
-
-                    <section id="innerCircle__points">
-                        <div id="points__screen" ></div>
-                        <h2 id="points__count">COUNT</h2>
-                    </section>
-                </div>
+            <div class="outerCircle__bottom">
+                <div id="bottom__left" class="bottom__left"></div>
+                <div id="bottom__right" class="bottom__right"></div>
+            </div>
+               
         </div>
+            <div class="innerCircle">
+                <h2>SIMON</h2>
+                <section id="innerCircle__controllers">
+                    <div id="controllers__switches">
+                        <label for="switches__power" class="switches__switch">ON
+                            <input type="checkbox" id="switch__on"> 
+                            <span class="switch__sliderRound"></span>
+                        </label>
+
+                        <label for="switches__strict" >STRICT
+                            <input type="checkbox" id="switch__strict">
+                            <span class="switch__sliderRound"></span>
+                        </label>
+                    </div>
+                    
+                    <button class="controllers__startButton" id="innerCircle__start">START</button>
+                    
+                </section>
+
+                <section id="innerCircle__points">
+                    <div id="points__screen" ></div>
+                    <h2 id="points__count">COUNT</h2>
+                </section>
+            </div>
+     
+        
     </section>
 
     <script src="js/index.js"></script>
