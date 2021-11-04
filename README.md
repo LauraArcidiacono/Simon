@@ -8,5 +8,6 @@ Proyecto personal realizado siguiendo un tutorial y refactorizando:
 
 🔹 Mejorando los nombres de funciones y variables para respetar buenas prácticas.
 
+💻 Enlace: https://simon-game-laura-arcidiacono.herokuapp.com/
 
 
